@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>EUspresso</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      color: #222;
+      background: #f5f5f5;
+    }
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background: #ffffff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 40px;
+      font-size: 1.5rem;
+    }
+    p {
+      margin: 8px 0;
+    }
+    .btn-primary {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .card {
+      background: #ffffff;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>EUspresso</h1>
+    <p>Skip the plane ticket. Drink foreign coffee at home.</p>
+    <a href="#contact" class="btn-primary">Contact Us</a>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>We Help Coffee Lovers in the United States</h2>
+      <p>It’s hard to find bold, authentic European espresso pods in regular US stores.</p>
+      <p>We partner with small European roasters and ship their pods directly to you, so you get better taste without overpaying for big brands.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Coffee</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Nespresso-Compatible Espresso Capsules (Original Line)</h3>
+          <p>Premium espresso capsules imported from Europe and compatible with most Nespresso original-line machines.</p>
+          <p>We focus on authentic foreign coffee: carefully roasted, packed at origin, and delivered to coffee lovers across the US so you can enjoy café-quality espresso at home without overpaying for big brands.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us">
+      <h2>Why Choose Us</h2>
+      <ul>
+        <li>Authentic European espresso capsules imported directly from trusted roasters.</li>
+        <li>Better value than many big-brand Nespresso-compatible pods in US stores.</li>
+        <li>Based in Oklahoma, with a local presence and responsive communication.</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:lina@eu-euspresso.com">lina@eu-euspresso.com</a></p>
+      <p>Location: Edmond, Oklahoma, USA</p>
+
+      <p>Click the button below to send us an email with your request:</p>
+      <a class="btn-primary" href="mailto:lina@eu-euspresso.com?subject=New%20Inquiry%20from%20Website">
+        Email Us
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; <span id="year"></span> EUspresso. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
