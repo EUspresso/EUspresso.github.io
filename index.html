@@ -211,6 +211,25 @@
       box-shadow: 0 8px 22px rgba(0,0,0,0.05);
     }
 
+    .product-grid {
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .product-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #f8fbff;
+      border: 1px solid rgba(37, 99, 235, 0.08);
+    }
+
     .label {
       display: inline-block;
       margin-bottom: 10px;
@@ -354,18 +373,32 @@
 
     <section id="products">
       <h2>Our Coffee</h2>
-      <div class="grid">
-        <div class="card">
+      <div class="grid product-grid">
+        <article class="card product-card">
+          <img class="product-image" src="remacaffe-allegro.jpg" alt="Rema Caffè Allegro Nespresso Original compatible capsules">
           <span class="label">Primary Collection</span>
-          <h3>Nespresso Original Compatible Capsules</h3>
+          <h3>Allegro Espresso Capsules</h3>
           <p>Traditional European espresso capsules from Rema Caffè, crafted in Bulgaria for use with Nespresso Original compatible machines.</p>
           <p>Designed for coffee lovers who want convenient, café-style espresso with authentic European character at home.</p>
-        </div>
-        <div class="card">
-          <h3>Dolce Gusto Compatible Beverages</h3>
+        </article>
+        <article class="card product-card">
+          <img class="product-image" src="remacaffe-hazelnut.jpg" alt="Rema Caffè hazelnut Dolce Gusto compatible beverage capsules">
+          <h3>Hazelnut Beverage Capsules</h3>
           <p>Rema Caffè beverages compatible with Dolce Gusto style machines, including approachable coffee-shop favorites and unexpected flavor options.</p>
           <p>A practical choice for households, offices, and retail shelves that need variety beyond traditional espresso.</p>
-        </div>
+        </article>
+        <article class="card product-card">
+          <img class="product-image" src="remacaffe-matcha-latte.jpg" alt="Rema Caffè matcha latte Dolce Gusto compatible beverage capsules">
+          <h3>Matcha Latte Capsules</h3>
+          <p>A creamy café-style beverage option that brings modern flavor variety to Dolce Gusto compatible machines.</p>
+          <p>Ideal for customers looking for convenient specialty drinks alongside classic European coffee selections.</p>
+        </article>
+        <article class="card product-card">
+          <img class="product-image" src="remacaffe-italian-chocolate.jpg" alt="Rema Caffè Italian chocolate Dolce Gusto compatible beverage capsules">
+          <h3>Italian Chocolate Capsules</h3>
+          <p>A rich chocolate beverage from Rema Caffè for Dolce Gusto compatible machines, crafted for easy café-inspired enjoyment.</p>
+          <p>Expands the product lineup for families, offices, and retailers that want warm beverage choices beyond espresso.</p>
+        </article>
       </div>
     </section>
 
