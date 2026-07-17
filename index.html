@@ -5,101 +5,358 @@
   <title>EUspresso</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    :root {
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --ink: #222;
+      --muted: #5f6673;
+      --paper: #ffffff;
+      --soft: #f5f5f5;
+      --tint: #eef4ff;
+      --line: #dce6f7;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.5;
-      color: #222;
-      background: #f5f5f5;
+      color: var(--ink);
+      background: var(--soft);
     }
+
+    a { color: var(--blue); }
+
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid rgba(37, 99, 235, 0.12);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    }
+
+    .nav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .nav-brand {
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 18px;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a {
+      color: var(--ink);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+
     header {
-      padding: 60px 20px;
+      padding: 54px 20px 64px;
       text-align: center;
-      background: #ffffff;
+      background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
-    .container {
-      max-width: 900px;
+
+    .hero {
+      max-width: 980px;
       margin: 0 auto;
-      padding: 20px;
     }
+
+    .logo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
     h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
+      font-size: clamp(2.4rem, 6vw, 4.6rem);
+      line-height: 1.05;
+      margin: 0 auto 18px;
+      max-width: 860px;
+      letter-spacing: -0.055em;
     }
-    h2 {
-      margin-top: 40px;
-      font-size: 1.5rem;
+
+    .hero-copy {
+      max-width: 720px;
+      margin: 0 auto;
+      color: var(--muted);
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
     }
-    p {
-      margin: 8px 0;
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 26px 0 22px;
     }
-    .btn-primary {
+
+    .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background: #2563eb;
-      color: #fff;
-      text-decoration: none;
+      padding: 13px 24px;
       border-radius: 999px;
-      font-weight: 600;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
     }
-    .btn-primary:hover {
-      opacity: 0.9;
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(37,99,235,0.16);
     }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: var(--blue-dark); }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--blue);
+      border: 1px solid var(--line);
+    }
+
+    .hero-image {
+      max-width: 340px;
+      width: 100%;
+      border-radius: 18px;
+      display: block;
+      margin: 18px auto 0;
+      box-shadow: 0 14px 35px rgba(0,0,0,0.10);
+    }
+
+    .launch-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 22px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--tint);
+      color: var(--blue-dark);
+      border: 1px solid var(--line);
+      font-weight: 800;
+      letter-spacing: 0.01em;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 20px 44px;
+    }
+
+    section {
+      scroll-margin-top: 86px;
+      margin: 36px 0;
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.55rem, 3vw, 2.15rem);
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    h3 { margin: 0 0 8px; }
+
+    p { margin: 8px 0; }
+
+    .section-copy {
+      max-width: 780px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
     }
+
     .card {
-      background: #ffffff;
-      padding: 16px;
-      border-radius: 12px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+      background: var(--paper);
+      padding: 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(37, 99, 235, 0.08);
+      box-shadow: 0 8px 22px rgba(0,0,0,0.05);
     }
+
+    .label {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--tint);
+      color: var(--blue-dark);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .why-grid .card p { color: var(--muted); }
+
+    .wholesale-panel {
+      margin-top: 46px;
+      padding: clamp(24px, 5vw, 42px);
+      border-radius: 22px;
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: #fff;
+      box-shadow: 0 16px 38px rgba(37,99,235,0.20);
+    }
+
+    .wholesale-panel p {
+      max-width: 760px;
+      color: rgba(255,255,255,0.88);
+      font-size: 1.06rem;
+    }
+
+    .wholesale-panel .btn-primary {
+      margin-top: 14px;
+      background: #fff;
+      color: var(--blue-dark);
+    }
+
+    .wholesale-panel .btn-primary:hover { background: #f3f7ff; }
+
     footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
+      background: #fff;
+      border-top: 1px solid rgba(37, 99, 235, 0.10);
       color: #555;
+    }
+
+    .footer-inner {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 20px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .business-details {
+      display: grid;
+      gap: 4px;
+      font-size: 0.95rem;
+    }
+
+    .legal-disclaimer {
+      padding-top: 14px;
+      border-top: 1px solid #e7eaf0;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      color: #6b7280;
+    }
+
+    @media (max-width: 680px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+        gap: 8px 12px;
+        font-size: 0.9rem;
+      }
+
+      header { padding: 34px 18px 46px; }
+
+      .logo {
+        width: 136px;
+        height: 136px;
+      }
+
+      .hero-actions { flex-direction: column; }
+
+      .btn { width: 100%; }
+
+      .container { padding: 18px 16px 34px; }
+
+      .card { padding: 18px; }
     }
   </style>
 </head>
 <body>
-<header>
-  <img
-    src="EUspresso.PNG"
-    alt="EUspresso logo"
-    style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; display: block; margin: 0 auto 16px;"
-  >
-  <h1>Bring the Taste of Europe Home.</h1>
-  <p>EUspresso brings traditional espresso and unexpected flavors from Rema Caffè, crafted in Bulgaria and coming to the United States.</p>
-  <p>EUspresso is the official U.S. representative and importer of Rema Caffè.</p>
+<nav class="top-nav" aria-label="Primary navigation">
+  <div class="nav-inner">
+    <a class="nav-brand" href="#top">EUspresso</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#why-euspresso">Why EUspresso</a>
+      <a href="#wholesale">Wholesale</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
-  <img
-    src="drinking coffee.png"
-    alt="Person enjoying a cup of European espresso"
-    style="max-width: 320px; width: 100%; border-radius: 12px; display: block; margin: 16px auto 0;"
-  >
+<header id="top">
+  <div class="hero">
+    <img
+      class="logo"
+      src="EUspresso.PNG"
+      alt="EUspresso logo"
+    >
+    <h1>Bring the Taste of Europe Home</h1>
+    <p class="hero-copy">EUspresso brings Rema Caffè’s European espresso capsules and flavorful compatible beverages from Bulgaria to U.S. homes, retailers, offices, and hospitality spaces.</p>
 
-  <div style="margin-top: 16px; font-size: 1.6rem; font-weight: 700; text-align: center;">
-    Online store coming 2026.
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="mailto:support@eu-espresso.com?subject=Wholesale%20Inquiry">Wholesale Inquiries</a>
+      <a class="btn btn-secondary" href="mailto:support@eu-espresso.com?subject=EUspresso%20Launch%20Updates">Get Launch Updates</a>
+    </div>
+
+    <img
+      class="hero-image"
+      src="drinking coffee.png"
+      alt="Person enjoying a cup of European espresso"
+    >
+
+    <div class="launch-badge">Online store launching in 2026</div>
   </div>
 </header>
 
   <main class="container">
     <section id="about">
-      <h2>Rema Caffè, Imported for the U.S.</h2>
-      <p>EUspresso connects U.S. coffee drinkers, retailers, and businesses with Rema Caffè: a European coffee brand crafted in Bulgaria with a range that spans classic espresso, creamy beverages, and bold flavor experiences.</p>
-      <p>As the official U.S. representative and importer of Rema Caffè, EUspresso is building a reliable path for these European products to reach American homes, stores, offices, and hospitality spaces.</p>
+      <h2>Meet Rema Caffè</h2>
+      <p class="section-copy">Rema Caffè makes approachable European coffee products in Bulgaria, from classic espresso capsules to creamy, café-inspired drinks. EUspresso is bringing the brand to the United States so customers and wholesale partners can enjoy more variety, simple compatibility, and dependable local support.</p>
     </section>
 
-    <section id="services">
+    <section id="products">
       <h2>Our Coffee</h2>
       <div class="grid">
         <div class="card">
+          <span class="label">Primary Collection</span>
           <h3>Nespresso Original Compatible Capsules</h3>
           <p>Traditional European espresso capsules from Rema Caffè, crafted in Bulgaria for use with Nespresso Original compatible machines.</p>
           <p>Designed for coffee lovers who want convenient, café-style espresso with authentic European character at home.</p>
@@ -112,32 +369,48 @@
       </div>
     </section>
 
-    <section id="why-us">
-      <h2>Why Choose Us</h2>
-      <ul>
-        <li><strong>European origin:</strong> Rema Caffè products are crafted in Bulgaria and brought to the United States by EUspresso.</li>
-        <li><strong>Product variety:</strong> Choose from traditional espresso capsules and flavorful Dolce Gusto compatible beverages.</li>
-        <li><strong>Machine compatibility:</strong> Options are available for Nespresso Original compatible and Dolce Gusto compatible systems.</li>
-        <li><strong>U.S.-based support:</strong> EUspresso provides importer coordination and responsive assistance for American customers and wholesale partners.</li>
-      </ul>
+    <section id="why-euspresso">
+      <h2>Why EUspresso</h2>
+      <div class="grid why-grid">
+        <div class="card">
+          <h3>European Origin</h3>
+          <p>Rema Caffè products are crafted in Bulgaria and brought to the United States by EUspresso.</p>
+        </div>
+        <div class="card">
+          <h3>Product Variety</h3>
+          <p>Choose from traditional espresso capsules and flavorful Dolce Gusto compatible beverages.</p>
+        </div>
+        <div class="card">
+          <h3>Easy Compatibility</h3>
+          <p>Options are available for Nespresso Original compatible and Dolce Gusto compatible systems.</p>
+        </div>
+        <div class="card">
+          <h3>U.S.-Based Support</h3>
+          <p>EUspresso provides importer coordination and responsive assistance for American customers and wholesale partners.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="wholesale">
+    <section id="wholesale" class="wholesale-panel">
       <h2>Wholesale Inquiries</h2>
-      <p>EUspresso welcomes wholesale conversations with grocery stores, European and Mediterranean markets, specialty retailers, offices, hotels, cafés, and other hospitality businesses.</p>
+      <p>Stock something familiar yet fresh for customers who love European coffee. EUspresso welcomes conversations with grocery stores, European and Mediterranean markets, specialty retailers, offices, hotels, cafés, and hospitality businesses.</p>
       <p>Contact us to discuss Rema Caffè product availability, compatible capsule formats, beverage variety, and importer support for your shelves or service program.</p>
-      <a class="btn-primary" href="mailto:support@eu-espresso.com?subject=Wholesale%20Inquiry">Contact EUspresso</a>
+      <a class="btn btn-primary" href="mailto:support@eu-espresso.com?subject=Wholesale%20Inquiry">Start a Wholesale Conversation</a>
     </section>
 
   </main>
 
-<footer>
-  <div>EUspresso LLC</div>
-  <div>2011 W Danforth Road, Suite 524, Edmond, OK 73003</div>
-  <div><a href="mailto:support@eu-espresso.com">support@eu-espresso.com</a></div>
-  <div>Official U.S. representative and importer of Rema Caffè products crafted in Bulgaria.</div>
-  <div>Nespresso and Dolce Gusto are trademarks of their respective owners. EUspresso LLC and Rema Caffè are not affiliated with, endorsed by, or sponsored by those trademark owners; compatibility references are for machine-system identification only.</div>
-  <div>&copy; <span id="year"></span> EUspresso LLC. All rights reserved.</div>
+<footer id="contact">
+  <div class="footer-inner">
+    <div class="business-details">
+      <strong>EUspresso LLC</strong>
+      <span>2011 W Danforth Road, Suite 524, Edmond, OK 73003</span>
+      <a href="mailto:support@eu-espresso.com">support@eu-espresso.com</a>
+      <span>Official U.S. representative and importer of Rema Caffè products crafted in Bulgaria.</span>
+      <span>&copy; <span id="year"></span> EUspresso LLC. All rights reserved.</span>
+    </div>
+    <div class="legal-disclaimer">Nespresso and Dolce Gusto are trademarks of their respective owners. EUspresso LLC and Rema Caffè are not affiliated with, endorsed by, or sponsored by those trademark owners; compatibility references are for machine-system identification only.</div>
+  </div>
 </footer>
 
   <script>
