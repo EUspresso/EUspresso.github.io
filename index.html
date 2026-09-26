@@ -2,537 +2,511 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>EUspresso | RemaCaffé Coffee Capsules Coming to the USA</title>
-  <meta name="description" content="EUspresso is bringing RemaCaffé coffee capsules and café-style compatible beverages from Bulgaria to U.S. customers, retailers, offices, and wholesale partners." />
+  <title>EUspresso | Rema Caffè Coffee Capsules in the USA</title>
+  <meta name="description" content="Discover Rema Caffè coffee capsules imported from Europe by EUspresso, including Nespresso Original compatible aluminum capsules and Dolce Gusto compatible café drinks." />
   <link rel="canonical" href="https://eu-espresso.com/" />
-  <meta property="og:title" content="EUspresso | RemaCaffé Coffee Capsules Coming to the USA" />
-  <meta property="og:description" content="Discover RemaCaffé European espresso capsules, café drinks, chocolate beverages, and specialty options coming soon to the USA through EUspresso." />
-  <meta property="og:image" content="https://eu-espresso.com/EUspresso.PNG" />
+  <meta property="og:title" content="EUspresso | Rema Caffè Coffee Capsules in the USA" />
+  <meta property="og:description" content="European-crafted coffee capsules for the moments you look forward to." />
+  <meta property="og:image" content="https://eu-espresso.com/assets/rema-classic-alu-all-caps.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://eu-espresso.com/" />
   <link rel="icon" href="EUspresso.PNG" type="image/png" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     :root {
-      --blue: #2563eb;
-      --blue-dark: #1d4ed8;
-      --ink: #222;
-      --muted: #5f6673;
-      --paper: #ffffff;
-      --soft: #f5f5f5;
-      --tint: #eef4ff;
-      --line: #dce6f7;
+      --red: #b31925;
+      --red-dark: #8d111b;
+      --ink: #171514;
+      --muted: #6b625d;
+      --cream: #f5efe8;
+      --warm: #ebe0d5;
+      --paper: #fffdf9;
+      --white: #ffffff;
+      --line: rgba(55, 42, 35, 0.12);
     }
-
     * { box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height: 1.5;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
-      background: var(--soft);
+      background: var(--paper);
+      line-height: 1.55;
     }
-
-    a { color: var(--blue); }
-
+    img { max-width: 100%; }
+    a { color: inherit; }
     .top-nav {
       position: sticky;
       top: 0;
-      z-index: 10;
-      background: rgba(255, 255, 255, 0.96);
-      border-bottom: 1px solid rgba(37, 99, 235, 0.12);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+      z-index: 20;
+      background: rgba(255,253,249,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
     }
-
     .nav-inner {
-      max-width: 1080px;
+      width: min(1180px, calc(100% - 36px));
       margin: 0 auto;
-      padding: 12px 20px;
+      min-height: 68px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 18px;
+      gap: 24px;
     }
-
     .nav-brand {
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      color: var(--ink);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
       text-decoration: none;
-      white-space: nowrap;
     }
-
+    .nav-brand strong {
+      font-size: 1.05rem;
+      letter-spacing: .03em;
+    }
+    .nav-brand span {
+      color: var(--muted);
+      font-size: .78rem;
+    }
     .nav-links {
       display: flex;
+      align-items: center;
       flex-wrap: wrap;
       justify-content: flex-end;
-      gap: 8px 18px;
-      font-size: 0.95rem;
+      gap: 18px;
+      font-size: .92rem;
+      font-weight: 700;
     }
-
-    .nav-links a {
-      color: var(--ink);
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .nav-links a:hover { color: var(--blue); }
-
-    header {
-      padding: 54px 20px 64px;
-      text-align: center;
-      background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
+    .nav-links a { text-decoration: none; }
+    .nav-links a:hover { color: var(--red); }
 
     .hero {
-      max-width: 980px;
+      width: min(1180px, calc(100% - 36px));
       margin: 0 auto;
+      padding: clamp(48px, 8vw, 92px) 0;
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      align-items: center;
+      gap: clamp(32px, 6vw, 76px);
     }
-
-    .logo {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto 18px;
+    .eyebrow {
+      color: var(--red);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: .76rem;
+      font-weight: 900;
+      margin-bottom: 16px;
     }
-
     h1 {
-      font-size: clamp(2.4rem, 6vw, 4.6rem);
-      line-height: 1.05;
-      margin: 0 auto 18px;
-      max-width: 860px;
-      letter-spacing: -0.055em;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.25rem, 7vw, 6.5rem);
+      line-height: .94;
+      letter-spacing: -.045em;
+      max-width: 760px;
     }
-
     .hero-copy {
-      max-width: 720px;
-      margin: 0 auto;
+      max-width: 650px;
+      margin: 24px 0 0;
       color: var(--muted);
-      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-size: clamp(1.05rem, 2vw, 1.27rem);
     }
-
     .hero-actions {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
       gap: 12px;
-      margin: 26px 0 22px;
+      flex-wrap: wrap;
+      margin-top: 28px;
     }
-
     .btn {
       display: inline-block;
-      padding: 13px 24px;
+      padding: 13px 22px;
       border-radius: 999px;
-      font-weight: 700;
       text-decoration: none;
-      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      font-weight: 850;
+      transition: .18s ease;
     }
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 18px rgba(37,99,235,0.16);
+    .btn-primary { background: var(--red); color: white; }
+    .btn-primary:hover { background: var(--red-dark); transform: translateY(-1px); }
+    .btn-secondary { background: transparent; border: 1px solid var(--line); }
+    .btn-secondary:hover { border-color: rgba(179,25,37,.45); color: var(--red); }
+    .hero-visual {
+      position: relative;
+      min-height: 490px;
+      border-radius: 34px;
+      overflow: hidden;
+      background: #efe7df;
+      box-shadow: 0 28px 70px rgba(66,43,31,.15);
     }
-
-    .btn-primary {
-      background: var(--blue);
-      color: #fff;
-    }
-
-    .btn-primary:hover { background: var(--blue-dark); }
-
-    .btn-secondary {
-      background: #fff;
-      color: var(--blue);
-      border: 1px solid var(--line);
-    }
-
-    .hero-image {
-      max-width: 340px;
+    .hero-visual img {
       width: 100%;
-      border-radius: 18px;
+      height: 100%;
+      min-height: 490px;
+      object-fit: cover;
       display: block;
-      margin: 18px auto 0;
-      box-shadow: 0 14px 35px rgba(0,0,0,0.10);
     }
+    .hero-note {
+      position: absolute;
+      left: 22px;
+      right: 22px;
+      bottom: 22px;
+      padding: 15px 18px;
+      background: rgba(255,253,249,.92);
+      backdrop-filter: blur(8px);
+      border-radius: 18px;
+      font-weight: 800;
+    }
+    .hero-note span { color: var(--muted); font-weight: 600; }
 
-    .launch-badge {
-      display: inline-flex;
+    .section {
+      padding: clamp(56px, 8vw, 94px) 0;
+    }
+    .section.alt { background: var(--cream); }
+    .wrap { width: min(1180px, calc(100% - 36px)); margin: 0 auto; }
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2.2rem, 4.6vw, 4rem);
+      line-height: 1;
+      letter-spacing: -.035em;
+      margin: 0 0 14px;
+    }
+    h3 { margin: 0 0 9px; font-size: 1.25rem; }
+    .section-copy { color: var(--muted); font-size: 1.07rem; margin: 0; }
+
+    .system-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 22px;
+    }
+    .system-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      box-shadow: 0 12px 34px rgba(50,37,29,.06);
+    }
+    .system-image {
+      background: #f8f3ed;
+      aspect-ratio: 16 / 10;
+      display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      margin-top: 22px;
-      padding: 10px 18px;
-      border-radius: 999px;
-      background: var(--tint);
-      color: var(--blue-dark);
-      border: 1px solid var(--line);
-      font-weight: 800;
-      letter-spacing: 0.01em;
+      overflow: hidden;
     }
-
-    .container {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 28px 20px 44px;
-    }
-
-    section {
-      scroll-margin-top: 86px;
-      margin: 36px 0;
-    }
-
-    h2 {
-      margin: 0 0 12px;
-      font-size: clamp(1.55rem, 3vw, 2.15rem);
-      line-height: 1.15;
-      letter-spacing: -0.025em;
-    }
-
-    h3 { margin: 0 0 8px; }
-
-    p { margin: 8px 0; }
-
-    .section-copy {
-      max-width: 780px;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .card {
-      background: var(--paper);
-      padding: 22px;
-      border-radius: 16px;
-      border: 1px solid rgba(37, 99, 235, 0.08);
-      box-shadow: 0 8px 22px rgba(0,0,0,0.05);
-    }
-
-    .product-grid {
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    }
-
-    .product-card {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .product-image {
+    .system-image img {
       width: 100%;
-      aspect-ratio: 4 / 3;
+      height: 100%;
       object-fit: contain;
-      border-radius: 12px;
-      background: #f8fbff;
-      border: 1px solid rgba(37, 99, 235, 0.08);
+      padding: 18px;
     }
-
-    .label {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 4px 10px;
+    .system-copy { padding: 24px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
       border-radius: 999px;
-      background: var(--tint);
-      color: var(--blue-dark);
-      font-size: 0.78rem;
-      font-weight: 800;
+      background: #f5e5e7;
+      color: var(--red-dark);
+      font-size: .72rem;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
+      letter-spacing: .09em;
+      margin-bottom: 12px;
     }
 
-    .why-grid .card p { color: var(--muted); }
-
-    .proof-list {
+    .premium-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 12px;
-      padding: 0;
-      margin: 20px 0 0;
-      list-style: none;
+      grid-template-columns: .95fr 1.05fr;
+      gap: 28px;
+      align-items: center;
     }
-
-    .proof-list li,
-    .category-card {
-      background: var(--paper);
-      border: 1px solid rgba(37, 99, 235, 0.10);
-      border-radius: 999px;
-      padding: 12px 16px;
-      color: var(--ink);
-      font-weight: 800;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+    .premium-image {
+      border-radius: 26px;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: 0 18px 50px rgba(50,37,29,.08);
     }
+    .premium-image img { display: block; width: 100%; }
 
-    .category-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 20px;
-    }
-
-    .faq-grid {
+    .flavor-grid {
       display: grid;
-      gap: 14px;
-      margin-top: 18px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
     }
-
-    .faq-item h3 { font-size: 1.05rem; }
-
-    .faq-item p { color: var(--muted); }
-
-    .wholesale-panel {
-      margin-top: 46px;
-      padding: clamp(24px, 5vw, 42px);
+    .flavor {
+      min-height: 140px;
       border-radius: 22px;
-      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-      color: #fff;
-      box-shadow: 0 16px 38px rgba(37,99,235,0.20);
+      padding: 18px;
+      display: flex;
+      align-items: flex-end;
+      font-weight: 900;
+      background: white;
+      border: 1px solid var(--line);
+    }
+    .flavor:nth-child(2) { background: #2f2926; color: white; }
+    .flavor:nth-child(3) { background: #b68155; color: white; }
+    .flavor:nth-child(4) { background: #d9c09c; }
+    .flavor:nth-child(5) { background: #dce6d3; }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px;
+      align-items: center;
+    }
+    .story-image {
+      border-radius: 28px;
+      overflow: hidden;
+      min-height: 440px;
+      background: #d9c4b1;
+    }
+    .story-image img { width: 100%; height: 100%; min-height: 440px; object-fit: cover; display:block; }
+    .proof-list {
+      margin: 26px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+    .proof-list li {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+      font-weight: 800;
     }
 
-    .wholesale-panel p {
-      max-width: 760px;
-      color: rgba(255,255,255,0.88);
-      font-size: 1.06rem;
+    .wholesale {
+      background: var(--ink);
+      color: white;
+      border-radius: 30px;
+      padding: clamp(28px, 5vw, 54px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 30px;
+      align-items: center;
     }
+    .wholesale p { color: rgba(255,255,255,.72); max-width: 780px; margin-bottom: 0; }
+    .wholesale .btn-secondary { border-color: rgba(255,255,255,.3); color: white; white-space: nowrap; }
+    .wholesale .btn-secondary:hover { border-color: white; }
 
-    .wholesale-panel .btn-primary {
-      margin-top: 14px;
-      background: #fff;
-      color: var(--blue-dark);
+    .faq-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .faq {
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: white;
     }
-
-    .wholesale-panel .btn-primary:hover { background: #f3f7ff; }
+    .faq p { color: var(--muted); margin-bottom: 0; }
 
     footer {
-      background: #fff;
-      border-top: 1px solid rgba(37, 99, 235, 0.10);
-      color: #555;
+      background: #120f0e;
+      color: #f5efe8;
+      padding: 34px 0;
     }
-
     .footer-inner {
-      max-width: 980px;
+      width: min(1180px, calc(100% - 36px));
       margin: 0 auto;
-      padding: 28px 20px;
       display: grid;
-      gap: 18px;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+      font-size: .9rem;
     }
+    .footer-inner a { color: #fff; }
+    .footer-muted { color: rgba(255,255,255,.58); }
 
-    .business-details {
-      display: grid;
-      gap: 4px;
-      font-size: 0.95rem;
+    @media (max-width: 900px) {
+      .hero, .system-grid, .premium-grid, .story-grid { grid-template-columns: 1fr; }
+      .hero-visual, .hero-visual img { min-height: 390px; }
+      .flavor-grid { grid-template-columns: repeat(2, 1fr); }
+      .wholesale { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
     }
-
-    .legal-disclaimer {
-      padding-top: 14px;
-      border-top: 1px solid #e7eaf0;
-      font-size: 0.78rem;
-      line-height: 1.45;
-      color: #6b7280;
-    }
-
     @media (max-width: 680px) {
-      .nav-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
-      }
-
-      .nav-links {
-        justify-content: flex-start;
-        gap: 8px 12px;
-        font-size: 0.9rem;
-      }
-
-      header { padding: 34px 18px 46px; }
-
-      .logo {
-        width: 136px;
-        height: 136px;
-      }
-
-      .hero-actions { flex-direction: column; }
-
-      .btn { width: 100%; }
-
-      .container { padding: 18px 16px 34px; }
-
-      .card { padding: 18px; }
+      .nav-inner { min-height: auto; padding: 14px 0; align-items: flex-start; flex-direction: column; }
+      .nav-links { gap: 10px 14px; }
+      .hero { padding-top: 42px; }
+      h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
+      .hero-visual, .hero-visual img { min-height: 320px; }
+      .flavor-grid, .faq-grid { grid-template-columns: 1fr; }
+      .system-copy { padding: 20px; }
     }
   </style>
 </head>
 <body>
-<nav class="top-nav" aria-label="Primary navigation">
-  <div class="nav-inner">
-    <a class="nav-brand" href="#top">EUspresso</a>
-    <div class="nav-links">
-      <a href="#about">About</a>
-      <a href="#products">Products</a>
-      <a href="#why-euspresso">Why EUspresso</a>
-      <a href="#wholesale">Wholesale</a>
-      <a href="#contact">Contact</a>
+  <nav class="top-nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">
+        <strong>EUspresso</strong>
+        <span>Rema Caffè in the USA</span>
+      </a>
+      <div class="nav-links">
+        <a href="#coffee">Coffee</a>
+        <a href="#premium">Premium</a>
+        <a href="#story">Our Story</a>
+        <a href="#wholesale">Wholesale</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<header id="top">
-  <div class="hero">
-    <img
-      class="logo"
-      src="EUspresso.PNG"
-      alt="EUspresso logo"
-    >
-    <h1>Bring the Taste of Europe Home</h1>
-    <p class="hero-copy">EUspresso brings RemaCaffé’s European espresso capsules and flavorful compatible beverages from Bulgaria to U.S. homes, retailers, offices, and hospitality spaces.</p>
-
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="mailto:support@eu-espresso.com?subject=Wholesale%20Inquiry">Wholesale Inquiries</a>
-      <a class="btn btn-secondary" href="mailto:support@eu-espresso.com?subject=EUspresso%20Launch%20Updates">Get Launch Updates</a>
+  <header id="top" class="hero">
+    <div>
+      <div class="eyebrow">Rema Caffè · Imported from Europe</div>
+      <h1>Vacation mood.<br>Every morning.</h1>
+      <p class="hero-copy">European-crafted coffee capsules for the moments you look forward to. Discover Rema Caffè — from classic espresso to playful café favorites — brought to the United States by EUspresso.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#coffee">Explore the coffee</a>
+        <a class="btn btn-secondary" href="mailto:support@eu-espresso.com?subject=EUspresso%20Launch%20Updates">Get launch updates</a>
+      </div>
     </div>
+    <div class="hero-visual">
+      <img src="drinking coffee.png" alt="Enjoying a relaxed coffee moment">
+      <div class="hero-note">A little escape from the ordinary. <span>One cup at a time.</span></div>
+    </div>
+  </header>
 
-    <img
-      class="hero-image"
-      src="drinking coffee.png"
-      alt="Person enjoying a cup of European espresso"
-    >
-
-    <div class="launch-badge">Online store launching in 2026</div>
-  </div>
-</header>
-
-  <main class="container">
-    <section id="about">
-      <h2>Meet RemaCaffé</h2>
-      <p class="section-copy">RemaCaffé makes approachable European coffee products in Bulgaria, from classic espresso capsules to creamy, café-inspired drinks. EUspresso is bringing the brand to the United States so customers and wholesale partners can enjoy more variety, simple compatibility, and dependable local support.</p>
-      <ul class="proof-list" aria-label="RemaCaffé proof points">
-        <li>Made in Plovdiv, Bulgaria</li>
-        <li>Roasted, ground, and packaged at origin</li>
-        <li>Produced using renewable solar energy</li>
-      </ul>
-    </section>
-
-    <section id="collection">
-      <h2>A Collection Beyond Ordinary Espresso.</h2>
-      <p class="section-copy">From classic coffee capsules to café-inspired beverages, RemaCaffé gives homes, offices, retailers, and hospitality partners a broader European capsule lineup.</p>
-      <div class="category-strip" aria-label="RemaCaffé beverage categories">
-        <span class="category-card">Classic Espresso</span>
-        <span class="category-card">Intense Roasts</span>
-        <span class="category-card">Flavored Coffee</span>
-        <span class="category-card">Cappuccino and Café Drinks</span>
-        <span class="category-card">Chocolate and Dessert-Inspired Drinks</span>
-        <span class="category-card">Matcha and Specialty Beverages</span>
-      </div>
-    </section>
-
-    <section id="products">
-      <h2>Our Coffee</h2>
-      <div class="grid product-grid">
-        <article class="card product-card">
-          <img class="product-image" src="remacaffe-allegro.jpg" alt="RemaCaffé Allegro Nespresso Original compatible capsules">
-          <span class="label">Primary Collection</span>
-          <h3>Allegro Espresso Capsules</h3>
-          <p>Traditional European espresso capsules from RemaCaffé, crafted in Bulgaria for use with Nespresso Original compatible machines.</p>
-          <p>Designed for coffee lovers who want convenient, café-style espresso with authentic European character at home.</p>
-        </article>
-        <article class="card product-card">
-          <img class="product-image" src="remacaffe-hazelnut.jpg" alt="RemaCaffé hazelnut Dolce Gusto compatible beverage capsules">
-          <h3>Hazelnut Beverage Capsules</h3>
-          <p>RemaCaffé beverages compatible with Dolce Gusto style machines, including approachable coffee-shop favorites and unexpected flavor options.</p>
-          <p>A practical choice for households, offices, and retail shelves that need variety beyond traditional espresso.</p>
-        </article>
-        <article class="card product-card">
-          <img class="product-image" src="remacaffe-matcha-latte.jpg" alt="RemaCaffé matcha latte Dolce Gusto compatible beverage capsules">
-          <h3>Matcha Latte Capsules</h3>
-          <p>A creamy café-style beverage option that brings modern flavor variety to Dolce Gusto compatible machines.</p>
-          <p>Ideal for customers looking for convenient specialty drinks alongside classic European coffee selections.</p>
-        </article>
-        <article class="card product-card">
-          <img class="product-image" src="remacaffe-italian-chocolate.jpg" alt="RemaCaffé Italian chocolate Dolce Gusto compatible beverage capsules">
-          <h3>Italian Chocolate Capsules</h3>
-          <p>A rich chocolate beverage from RemaCaffé for Dolce Gusto compatible machines, crafted for easy café-inspired enjoyment.</p>
-          <p>Expands the product lineup for families, offices, and retailers that want warm beverage choices beyond espresso.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="why-euspresso">
-      <h2>Why EUspresso</h2>
-      <div class="grid why-grid">
-        <div class="card">
-          <h3>European Origin</h3>
-          <p>RemaCaffé products are crafted in Bulgaria and brought to the United States by EUspresso.</p>
+  <main>
+    <section id="coffee" class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Find your coffee</div>
+          <h2>Choose your system.</h2>
+          <p class="section-copy">Start with the machine you already own, then find the coffee that fits the moment. Nespresso Original compatible aluminum capsules are our primary U.S. collection.</p>
         </div>
-        <div class="card">
-          <h3>Product Variety</h3>
-          <p>Choose from traditional espresso capsules and flavorful Dolce Gusto compatible beverages.</p>
-        </div>
-        <div class="card">
-          <h3>Easy Compatibility</h3>
-          <p>Options are available for Nespresso Original compatible and Dolce Gusto compatible systems.</p>
-        </div>
-        <div class="card">
-          <h3>U.S.-Based Support</h3>
-          <p>EUspresso provides importer coordination and responsive assistance for American customers and wholesale partners.</p>
+        <div class="system-grid">
+          <article class="system-card">
+            <div class="system-image">
+              <img src="assets/rema-classic-alu-all-caps.jpg" alt="Rema Caffè Nespresso Original compatible aluminum capsule collection">
+            </div>
+            <div class="system-copy">
+              <span class="pill">Primary U.S. Collection</span>
+              <h3>Nespresso Original Compatible</h3>
+              <p class="section-copy">Classic and flavored aluminum capsules with European character, designed for Nespresso Original compatible machines.</p>
+            </div>
+          </article>
+          <article class="system-card">
+            <div class="system-image">
+              <img src="assets/rema-dolce-gusto-all.jpg" alt="Rema Caffè Dolce Gusto compatible beverage collection">
+            </div>
+            <div class="system-copy">
+              <span class="pill">Café Favorites</span>
+              <h3>Dolce Gusto Compatible</h3>
+              <p class="section-copy">Coffee, cappuccino, chocolate, matcha and other café-style drinks for Dolce Gusto compatible systems.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="wholesale" class="wholesale-panel">
-      <h2>Wholesale Inquiries</h2>
-      <p>Stock something familiar yet fresh for customers who love European coffee. EUspresso welcomes conversations with grocery stores, European and Mediterranean markets, specialty retailers, offices, hotels, cafés, and hospitality businesses.</p>
-      <p>Contact us to discuss RemaCaffé product availability, compatible capsule formats, beverage variety, and importer support for your shelves or service program.</p>
-      <a class="btn btn-primary" href="mailto:support@eu-espresso.com?subject=Wholesale%20Inquiry">Start a Wholesale Conversation</a>
-    </section>
-
-    <section id="faq">
-      <h2>FAQ</h2>
-      <div class="faq-grid">
-        <article class="card faq-item">
-          <h3>When will the online store launch?</h3>
-          <p>EUspresso plans to launch online ordering in 2026. Join the launch list for availability updates.</p>
-        </article>
-        <article class="card faq-item">
-          <h3>Which machines are the products compatible with?</h3>
-          <p>The lineup includes capsules for Nespresso Original compatible machines and beverages for Dolce Gusto compatible machines.</p>
-        </article>
-        <article class="card faq-item">
-          <h3>Where are RemaCaffé products made?</h3>
-          <p>RemaCaffé products are made in Plovdiv, Bulgaria, where they are roasted, ground, and packaged at origin.</p>
-        </article>
-        <article class="card faq-item">
-          <h3>Does EUspresso offer wholesale opportunities?</h3>
-          <p>Yes. EUspresso welcomes wholesale conversations with retailers, offices, hotels, cafés, hospitality businesses, and specialty markets.</p>
-        </article>
+    <section id="premium" class="section">
+      <div class="wrap premium-grid">
+        <div class="premium-image">
+          <img src="assets/rema-premium-delicato-set.jpg" alt="Rema Caffè Premium Delicato capsule boxes">
+        </div>
+        <div>
+          <div class="eyebrow">Rema Caffè Premium</div>
+          <h2>A more elevated espresso moment.</h2>
+          <p class="section-copy">The Premium collection brings a more refined look and espresso-forward experience to the range, including Delicato, Fortissimo, Supremo and Ristretto.</p>
+          <p class="section-copy" style="margin-top:14px;">Built for the same idea at the heart of Rema Caffè: make the everyday coffee moment feel a little more special.</p>
+        </div>
       </div>
     </section>
 
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Explore the mood</div>
+          <h2>There is more than one way to enjoy the moment.</h2>
+          <p class="section-copy">Rema Caffè moves easily from the first espresso of the morning to something sweeter, creamier or more playful later in the day.</p>
+        </div>
+        <div class="flavor-grid">
+          <div class="flavor">Classic Espresso</div>
+          <div class="flavor">Bold & Intense</div>
+          <div class="flavor">Flavored Coffee</div>
+          <div class="flavor">Café Favorites</div>
+          <div class="flavor">Something Different</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="section">
+      <div class="wrap story-grid">
+        <div class="story-image">
+          <img src="drinking coffee.png" alt="A relaxed everyday coffee ritual">
+        </div>
+        <div>
+          <div class="eyebrow">Meet Rema Caffè</div>
+          <h2>Coffee belongs inside a life well enjoyed.</h2>
+          <p class="section-copy">Rema Caffè is built around pleasure in the everyday coffee moment — a quiet morning, a café-style treat, a conversation, or a small break from the routine. EUspresso brings that European coffee experience to U.S. customers and retail partners.</p>
+          <ul class="proof-list">
+            <li>Crafted in Plovdiv, Bulgaria</li>
+            <li>Roasted, ground and packaged at origin</li>
+            <li>Produced using renewable solar energy</li>
+            <li>Imported and supported in the U.S. by EUspresso</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="wholesale" class="section">
+      <div class="wrap">
+        <div class="wholesale">
+          <div>
+            <div class="eyebrow" style="color:#e8a9ae;">For retail & distribution partners</div>
+            <h2 style="margin-bottom:12px;">Bring Rema Caffè to your shelves.</h2>
+            <p>EUspresso welcomes conversations with independent retailers, European and Mediterranean markets, specialty grocers, online coffee retailers and regional distributors. Ask about product availability, wholesale formats and launch opportunities.</p>
+          </div>
+          <a class="btn btn-secondary" href="mailto:support@eu-espresso.com?subject=Wholesale%20Inquiry">Request wholesale information</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">FAQ</div>
+          <h2>Good to know.</h2>
+        </div>
+        <div class="faq-grid">
+          <article class="faq">
+            <h3>When will online ordering be available?</h3>
+            <p>EUspresso is preparing the U.S. launch. Join the launch list for availability and ordering updates.</p>
+          </article>
+          <article class="faq">
+            <h3>Which machines are compatible?</h3>
+            <p>The range includes capsules for Nespresso Original compatible machines and drinks for Dolce Gusto compatible machines.</p>
+          </article>
+          <article class="faq">
+            <h3>Where is Rema Caffè made?</h3>
+            <p>Rema Caffè products are made in Plovdiv, Bulgaria, and imported to the United States by EUspresso.</p>
+          </article>
+          <article class="faq">
+            <h3>Do you offer wholesale?</h3>
+            <p>Yes. We are building relationships with retailers, specialty markets, online coffee sellers and regional wholesale partners.</p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
-<footer id="contact">
-  <div class="footer-inner">
-    <div class="business-details">
-      <strong>EUspresso LLC</strong>
-      <span>2011 W Danforth Road, Suite 524, Edmond, OK 73003</span>
-      <a href="mailto:support@eu-espresso.com">support@eu-espresso.com</a>
-      <span>Official U.S. representative and importer of RemaCaffé products crafted in Bulgaria.</span>
-      <span>&copy; <span id="year"></span> EUspresso LLC. All rights reserved.</span>
+  <footer id="contact">
+    <div class="footer-inner">
+      <div>
+        <strong>EUspresso LLC</strong><br>
+        2011 W Danforth Road, Suite 524, Edmond, OK 73003<br>
+        <a href="mailto:support@eu-espresso.com">support@eu-espresso.com</a>
+      </div>
+      <div class="footer-muted">
+        Official U.S. representative and importer of Rema Caffè products crafted in Bulgaria.<br>
+        Nespresso and Dolce Gusto are trademarks of their respective owners. EUspresso and Rema Caffè are not affiliated with or endorsed by those trademark owners.<br>
+        &copy; <span id="year"></span> EUspresso LLC. All rights reserved.
+      </div>
     </div>
-    <div class="legal-disclaimer">Nespresso and Dolce Gusto are trademarks of their respective owners. EUspresso and RemaCaffé are not affiliated with or endorsed by those trademark owners.</div>
-  </div>
-</footer>
+  </footer>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
