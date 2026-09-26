@@ -59,12 +59,16 @@
       text-decoration: none;
     }
     .nav-brand strong {
-      font-size: 1.05rem;
-      letter-spacing: .03em;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.35rem;
+      letter-spacing: -.025em;
+      color: var(--red);
     }
     .nav-brand span {
       color: var(--muted);
-      font-size: .78rem;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .02em;
     }
     .nav-links {
       display: flex;
@@ -217,6 +221,68 @@
       margin-bottom: 12px;
     }
 
+
+    .collection-intro {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+    .collection-note {
+      max-width: 330px;
+      color: var(--muted);
+      font-size: .88rem;
+      text-align: right;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 28px rgba(50,37,29,.05);
+    }
+    .product-photo {
+      aspect-ratio: 1 / 1;
+      background: #f8f3ed;
+      overflow: hidden;
+    }
+    .product-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 14px;
+      display: block;
+      transition: transform .2s ease;
+    }
+    .product-card:hover .product-photo img { transform: scale(1.025); }
+    .product-body { padding: 18px; }
+    .product-meta {
+      color: var(--red);
+      font-size: .72rem;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+    .product-body p {
+      margin: 7px 0 0;
+      color: var(--muted);
+      font-size: .94rem;
+    }
+    .product-detail {
+      display: inline-block;
+      margin-top: 13px;
+      font-weight: 800;
+      font-size: .84rem;
+      color: var(--ink);
+    }
+
     .premium-grid {
       display: grid;
       grid-template-columns: .95fr 1.05fr;
@@ -320,6 +386,9 @@
     @media (max-width: 900px) {
       .hero, .system-grid, .premium-grid, .story-grid { grid-template-columns: 1fr; }
       .hero-visual, .hero-visual img { min-height: 390px; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .collection-intro { align-items: flex-start; flex-direction: column; }
+      .collection-note { text-align: left; }
       .flavor-grid { grid-template-columns: repeat(2, 1fr); }
       .wholesale { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
@@ -330,7 +399,7 @@
       .hero { padding-top: 42px; }
       h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
       .hero-visual, .hero-visual img { min-height: 320px; }
-      .flavor-grid, .faq-grid { grid-template-columns: 1fr; }
+      .product-grid, .flavor-grid, .faq-grid { grid-template-columns: 1fr; }
       .system-copy { padding: 20px; }
     }
   </style>
@@ -338,9 +407,9 @@
 <body>
   <nav class="top-nav" aria-label="Primary navigation">
     <div class="nav-inner">
-      <a class="nav-brand" href="#top">
-        <strong>EUspresso</strong>
-        <span>Rema Caffè in the USA</span>
+      <a class="nav-brand" href="#top" aria-label="Rema Caffè, imported to the U.S. by EUspresso">
+        <strong>Rema Caffè</strong>
+        <span>Imported to the U.S. by EUspresso</span>
       </a>
       <div class="nav-links">
         <a href="#coffee">Coffee</a>
@@ -401,7 +470,59 @@
       </div>
     </section>
 
-    <section id="premium" class="section">
+
+    <section id="nespresso-collection" class="section">
+      <div class="wrap">
+        <div class="collection-intro">
+          <div class="section-head" style="margin-bottom:0;">
+            <div class="eyebrow">Nespresso Original compatible</div>
+            <h2>Meet a few of the coffees coming to the U.S.</h2>
+            <p class="section-copy">Ten aluminum capsules per box, with a mix of classic espresso and flavored coffees. These are collection highlights while we finalize the full U.S. launch assortment.</p>
+          </div>
+          <div class="collection-note">Product availability may vary during the launch phase.</div>
+        </div>
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-photo"><img src="assets/rema-allegro-box-caps.jpg" alt="Rema Caffè Allegro box with Nespresso Original compatible aluminum capsule"></div>
+            <div class="product-body">
+              <div class="product-meta">Classic espresso</div>
+              <h3>Allegro</h3>
+              <p>Balanced and elegant, with citrus, nut and dried-fruit notes and a gentle medium roast.</p>
+              <span class="product-detail">10 aluminum capsules</span>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-photo"><img src="assets/rema-caramel-box-caps.jpg" alt="Rema Caffè Caramel box with Nespresso Original compatible aluminum capsule"></div>
+            <div class="product-body">
+              <div class="product-meta">Flavored coffee</div>
+              <h3>Caramel</h3>
+              <p>100% Arabica with a smooth espresso character and creamy caramel aroma.</p>
+              <span class="product-detail">10 aluminum capsules</span>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-photo"><img src="assets/rema-cookies-box-caps.jpg" alt="Rema Caffè Cookies box with Nespresso Original compatible aluminum capsule"></div>
+            <div class="product-body">
+              <div class="product-meta">Flavored coffee</div>
+              <h3>Cookies</h3>
+              <p>A playful coffee built around the familiar sweetness of chocolate-cookie flavor.</p>
+              <span class="product-detail">10 aluminum capsules</span>
+            </div>
+          </article>
+          <article class="product-card">
+            <div class="product-photo"><img src="assets/rema-hazelnut-box-caps.jpg" alt="Rema Caffè Hazelnut box with Nespresso Original compatible aluminum capsule"></div>
+            <div class="product-body">
+              <div class="product-meta">Flavored coffee</div>
+              <h3>Hazelnut</h3>
+              <p>100% Arabica with roasted hazelnut, chocolate and espresso notes in a smooth medium body.</p>
+              <span class="product-detail">10 aluminum capsules</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="premium" class="section alt">
       <div class="wrap premium-grid">
         <div class="premium-image">
           <img src="assets/rema-premium-delicato-set.jpg" alt="Rema Caffè Premium Delicato capsule boxes">
@@ -415,7 +536,7 @@
       </div>
     </section>
 
-    <section class="section alt">
+    <section class="section">
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">Explore the mood</div>
