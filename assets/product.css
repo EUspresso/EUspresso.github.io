@@ -10,9 +10,9 @@ img{max-width:100%}
 a{color:inherit}
 .top-nav{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-inner{width:min(1180px,calc(100% - 36px));min-height:68px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
-.nav-brand{display:flex;align-items:baseline;gap:10px;text-decoration:none}
-.nav-brand strong{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;letter-spacing:-.025em;color:var(--red)}
-.nav-brand span{color:var(--muted);font-size:.72rem;font-weight:700}
+.nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand-logo{display:block;width:148px;height:46px;flex:0 0 auto;background:#fff url('/assets/dg-gusto-satin-box-caps.jpg') -84px -214px / 640px 640px no-repeat;border-radius:2px}
+.brand-import{color:var(--muted);font-size:.72rem;font-weight:700;max-width:110px;line-height:1.15}
 .nav-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem;font-weight:800}
 .nav-links a{text-decoration:none}.nav-links a:hover{color:var(--red)}
 .wrap{width:min(1180px,calc(100% - 36px));margin:0 auto}

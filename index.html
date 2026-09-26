@@ -54,21 +54,25 @@
     }
     .nav-brand {
       display: flex;
-      align-items: baseline;
+      align-items: center;
       gap: 10px;
       text-decoration: none;
     }
-    .nav-brand strong {
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 1.35rem;
-      letter-spacing: -.025em;
-      color: var(--red);
+    .brand-logo {
+      display: block;
+      width: 148px;
+      height: 46px;
+      flex: 0 0 auto;
+      background: #fff url('/assets/dg-gusto-satin-box-caps.jpg') -84px -214px / 640px 640px no-repeat;
+      border-radius: 2px;
     }
-    .nav-brand span {
+    .brand-import {
       color: var(--muted);
       font-size: .72rem;
       font-weight: 700;
       letter-spacing: .02em;
+      max-width: 110px;
+      line-height: 1.15;
     }
     .nav-links {
       display: flex;
@@ -224,7 +228,7 @@
 
     .collection-intro {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: end;
       gap: 24px;
       margin-bottom: 28px;
@@ -462,8 +466,8 @@
   <nav class="top-nav" aria-label="Primary navigation">
     <div class="nav-inner">
       <a class="nav-brand" href="#top" aria-label="Rema Caffè, imported to the U.S. by EUspresso">
-        <strong>Rema Caffè</strong>
-        <span>Imported to the U.S. by EUspresso</span>
+        <span class="brand-logo" aria-hidden="true"></span>
+        <span class="brand-import">Imported to the U.S. by EUspresso</span>
       </a>
       <div class="nav-links">
         <a href="shop/">Shop Preview</a>
@@ -498,8 +502,8 @@
       <div class="wrap">
         <div class="section-head">
           <div class="eyebrow">Find your coffee</div>
-          <h2>Choose your system.</h2>
-          <p class="section-copy">Start with the machine you already own, then find the coffee that fits the moment. Nespresso Original compatible aluminum capsules are our primary U.S. collection.</p>
+          <h2>One brand. Two capsule systems.</h2>
+          <p class="section-copy">Rema Caffè supports two popular capsule systems, making it easy to find the coffee that fits the machine you already own.</p>
         </div>
         <div class="system-grid">
           <article class="system-card">
@@ -507,7 +511,7 @@
               <img src="assets/rema-classic-alu-all-caps.jpg" alt="Rema Caffè Nespresso Original compatible aluminum capsule collection">
             </div>
             <div class="system-copy">
-              <span class="pill">Primary U.S. Collection</span>
+              <span class="pill">Primary Collection</span>
               <h3>Nespresso Original Compatible</h3>
               <p class="section-copy">Classic and flavored aluminum capsules with European character, designed for Nespresso Original compatible machines.</p>
             </div>
@@ -517,9 +521,9 @@
               <img src="assets/rema-dolce-gusto-all.jpg" alt="Rema Caffè Dolce Gusto compatible beverage collection">
             </div>
             <div class="system-copy">
-              <span class="pill">Secondary Launch Collection</span>
+              <span class="pill">Additional Collection</span>
               <h3>Dolce Gusto Compatible</h3>
-              <p class="section-copy">A smaller introductory selection of seven coffees for Dolce Gusto compatible systems.</p>
+              <p class="section-copy">An introductory selection of seven coffees for Dolce Gusto compatible systems.</p>
               <a class="product-detail" href="dolce-gusto/">Explore Dolce Gusto →</a>
             </div>
           </article>
@@ -532,14 +536,11 @@
       <div class="wrap">
         <div class="collection-intro">
           <div class="section-head" style="margin-bottom:0;">
-            <div class="eyebrow">First U.S. Nespresso Original collection</div>
+            <div class="eyebrow">Initial U.S. Nespresso Original collection</div>
             <h2>Eight coffees. One easy way to explore Rema Caffè.</h2>
             <p class="section-copy">Our first U.S. assortment pairs three flavored coffees with five classic espresso styles. Every box contains 10 aluminum capsules compatible with Nespresso Original machines.</p>
           </div>
-          <div class="collection-note">Launch assortment shown below. Availability may change as the first shipment sells through.</div>
         </div>
-
-        <div class="launch-bar">Flavor leads the first U.S. drop: Cookies, Caramel and Hazelnut are the three featured launch coffees.</div>
 
         <div class="collection-group-head">
           <h3>Flavor collection</h3>
@@ -629,7 +630,7 @@
       </div>
     </section>
 
-    <section class="section alt"><div class="wrap shop-preview"><div><div class="eyebrow">Launch shop preview</div><h2>Start with a pack, then find your favorite.</h2><p class="section-copy">We're preparing single sleeves plus discovery packs for the first U.S. launch. The current working plan is $7.99 per Nespresso Original sleeve with free standard shipping at $40+.</p><div class="hero-actions"><a class="btn btn-primary" href="shop/">See planned launch packs</a></div></div><div class="shop-cards"><article class="shop-card"><small>3 sleeves</small><h3>Flavor Trio</h3><p>Cookies, Caramel and Hazelnut.</p></article><article class="shop-card"><small>6 sleeves</small><h3>Build Your Six</h3><p>Mix the collection your way.</p></article><article class="shop-card"><small>8 sleeves</small><h3>Full Collection</h3><p>Try every Nespresso launch coffee.</p></article></div></div></section>
+    <section class="section alt"><div class="wrap shop-preview"><div><div class="eyebrow">Launch preview</div><h2>Start with a pack, then find your favorite.</h2><p class="section-copy">Explore the suggested launch assortment, including single sleeves and discovery packs. Nespresso Original compatible sleeves are shown at a suggested launch MSRP of $7.99, with free standard shipping planned for orders of $40 or more.</p><div class="hero-actions"><a class="btn btn-primary" href="shop/">See planned launch packs</a></div></div><div class="shop-cards"><article class="shop-card"><small>3 sleeves</small><h3>Flavor Trio</h3><p>Cookies, Caramel and Hazelnut.</p></article><article class="shop-card"><small>6 sleeves</small><h3>Build Your Six</h3><p>Mix the collection your way.</p></article><article class="shop-card"><small>8 sleeves</small><h3>Full Collection</h3><p>Try every Nespresso launch coffee.</p></article></div></div></section>
 
     <section id="premium" class="section">
       <div class="wrap premium-grid">
@@ -639,8 +640,8 @@
         <div>
           <div class="eyebrow">Future U.S. collection</div>
           <h2>A premium chapter for later.</h2>
-          <p class="section-copy">Rema Caffè also produces a Premium Nespresso-compatible collection, including Delicato, Fortissimo, Supremo and Ristretto. It is not part of the first U.S. shipment, but it gives us a natural next collection to evaluate after launch.</p>
-          <p class="section-copy" style="margin-top:14px;">For now, the focus stays on learning what U.S. customers love most from the eight-coffee Classic and Flavor assortment above.</p>
+          <p class="section-copy">Rema Caffè also offers a Premium Nespresso-compatible collection, including Delicato, Fortissimo, Supremo and Ristretto, expanding the range with a more refined espresso experience.</p>
+          <p class="section-copy" style="margin-top:14px;">The Premium collection gives coffee lovers another way to explore Rema Caffè beyond the initial Classic and Flavor assortment.</p>
         </div>
       </div>
     </section>
@@ -672,7 +673,7 @@
           <h2>Coffee belongs inside a life well enjoyed.</h2>
           <p class="section-copy">Rema Caffè is built around pleasure in the everyday coffee moment — a quiet morning, a café-style treat, a conversation, or a small break from the routine. EUspresso brings that European coffee experience to U.S. customers and retail partners.</p>
           <ul class="proof-list">
-            <li>Crafted in Plovdiv, Bulgaria</li>
+            <li>Crafted in Europe — Plovdiv, Bulgaria</li>
             <li>Roasted, ground and packaged at origin</li>
             <li>Produced using renewable solar energy</li>
             <li>Imported and supported in the U.S. by EUspresso</li>
