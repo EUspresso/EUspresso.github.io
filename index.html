@@ -329,6 +329,12 @@
     }
     .product-detail:hover { color: var(--red); }
 
+    .shop-preview {display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center;}
+    .shop-cards {display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+    .shop-card {padding:20px;border-radius:20px;background:white;border:1px solid var(--line);}
+    .shop-card small {color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.08em;}
+    .shop-card h3 {margin-top:8px;}
+    .shop-card p {color:var(--muted);font-size:.9rem;margin-bottom:0;}
     .premium-grid {
       display: grid;
       grid-template-columns: .95fr 1.05fr;
@@ -430,9 +436,10 @@
     .footer-muted { color: rgba(255,255,255,.58); }
 
     @media (max-width: 900px) {
-      .hero, .system-grid, .premium-grid, .story-grid { grid-template-columns: 1fr; }
+      .hero, .system-grid, .premium-grid, .story-grid, .shop-preview { grid-template-columns: 1fr; }
       .hero-visual, .hero-visual img { min-height: 390px; }
       .featured-product-grid { grid-template-columns: repeat(2, 1fr); }
+      .shop-cards { grid-template-columns: 1fr; }
       .classic-product-grid { grid-template-columns: repeat(3, 1fr); }
       .collection-intro { align-items: flex-start; flex-direction: column; }
       .collection-note { text-align: left; }
@@ -459,6 +466,7 @@
         <span>Imported to the U.S. by EUspresso</span>
       </a>
       <div class="nav-links">
+        <a href="shop/">Shop Preview</a>
         <a href="#nespresso-collection">Launch Collection</a>
         <a href="dolce-gusto/">Dolce Gusto</a>
         <a href="#premium">Premium</a>
@@ -475,7 +483,7 @@
       <h1>Vacation mood.<br>Every morning.</h1>
       <p class="hero-copy">European-crafted coffee capsules for the moments you look forward to. Discover Rema Caffè — from classic espresso to playful café favorites — brought to the United States by EUspresso.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#coffee">Explore the coffee</a>
+        <a class="btn btn-primary" href="shop/">Preview the launch shop</a>
         <a class="btn btn-secondary" href="mailto:support@eu-espresso.com?subject=EUspresso%20Launch%20Updates">Get launch updates</a>
       </div>
     </div>
@@ -621,7 +629,9 @@
       </div>
     </section>
 
-    <section id="premium" class="section alt">
+    <section class="section alt"><div class="wrap shop-preview"><div><div class="eyebrow">Launch shop preview</div><h2>Start with a pack, then find your favorite.</h2><p class="section-copy">We're preparing single sleeves plus discovery packs for the first U.S. launch. The current working plan is $7.99 per Nespresso Original sleeve with free standard shipping at $40+.</p><div class="hero-actions"><a class="btn btn-primary" href="shop/">See planned launch packs</a></div></div><div class="shop-cards"><article class="shop-card"><small>3 sleeves</small><h3>Flavor Trio</h3><p>Cookies, Caramel and Hazelnut.</p></article><article class="shop-card"><small>6 sleeves</small><h3>Build Your Six</h3><p>Mix the collection your way.</p></article><article class="shop-card"><small>8 sleeves</small><h3>Full Collection</h3><p>Try every Nespresso launch coffee.</p></article></div></div></section>
+
+    <section id="premium" class="section">
       <div class="wrap premium-grid">
         <div class="premium-image">
           <img src="assets/rema-premium-delicato-set.jpg" alt="Rema Caffè Premium Delicato capsule boxes">
