@@ -230,41 +230,84 @@
       margin-bottom: 28px;
     }
     .collection-note {
-      max-width: 330px;
+      max-width: 350px;
       color: var(--muted);
       font-size: .88rem;
       text-align: right;
     }
-    .product-grid {
+    .launch-bar {
+      margin: 0 0 26px;
+      padding: 13px 16px;
+      border-radius: 16px;
+      background: #f5e5e7;
+      color: var(--red-dark);
+      font-size: .88rem;
+      font-weight: 850;
+    }
+    .collection-group-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin: 30px 0 14px;
+    }
+    .collection-group-head h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.65rem;
+      margin: 0;
+    }
+    .collection-group-head span {
+      color: var(--muted);
+      font-size: .86rem;
+    }
+    .featured-product-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
-    .product-card {
+    .feature-card,
+    .classic-card {
       background: #fff;
       border: 1px solid var(--line);
       border-radius: 22px;
       overflow: hidden;
       box-shadow: 0 10px 28px rgba(50,37,29,.05);
     }
-    .product-photo {
+    .feature-photo {
       aspect-ratio: 1 / 1;
-      background: #f8f3ed;
       overflow: hidden;
+      background: #eee6de;
     }
-    .product-photo img {
+    .feature-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .22s ease;
+    }
+    .feature-card:hover .feature-photo img { transform: scale(1.025); }
+    .classic-product-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .classic-photo {
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      background: #f8f3ed;
+    }
+    .classic-photo img {
       width: 100%;
       height: 100%;
       object-fit: contain;
-      padding: 14px;
+      padding: 12px;
       display: block;
-      transition: transform .2s ease;
     }
-    .product-card:hover .product-photo img { transform: scale(1.025); }
     .product-body { padding: 18px; }
+    .classic-card .product-body { padding: 15px; }
     .product-meta {
       color: var(--red);
-      font-size: .72rem;
+      font-size: .70rem;
       font-weight: 900;
       letter-spacing: .08em;
       text-transform: uppercase;
@@ -273,13 +316,14 @@
     .product-body p {
       margin: 7px 0 0;
       color: var(--muted);
-      font-size: .94rem;
+      font-size: .93rem;
     }
+    .classic-card .product-body p { font-size: .86rem; }
     .product-detail {
       display: inline-block;
-      margin-top: 13px;
+      margin-top: 12px;
       font-weight: 800;
-      font-size: .84rem;
+      font-size: .82rem;
       color: var(--ink);
     }
 
@@ -386,7 +430,8 @@
     @media (max-width: 900px) {
       .hero, .system-grid, .premium-grid, .story-grid { grid-template-columns: 1fr; }
       .hero-visual, .hero-visual img { min-height: 390px; }
-      .product-grid { grid-template-columns: repeat(2, 1fr); }
+      .featured-product-grid { grid-template-columns: repeat(2, 1fr); }
+      .classic-product-grid { grid-template-columns: repeat(3, 1fr); }
       .collection-intro { align-items: flex-start; flex-direction: column; }
       .collection-note { text-align: left; }
       .flavor-grid { grid-template-columns: repeat(2, 1fr); }
@@ -399,7 +444,7 @@
       .hero { padding-top: 42px; }
       h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
       .hero-visual, .hero-visual img { min-height: 320px; }
-      .product-grid, .flavor-grid, .faq-grid { grid-template-columns: 1fr; }
+      .featured-product-grid, .classic-product-grid, .flavor-grid, .faq-grid { grid-template-columns: 1fr; }
       .system-copy { padding: 20px; }
     }
   </style>
@@ -412,7 +457,7 @@
         <span>Imported to the U.S. by EUspresso</span>
       </a>
       <div class="nav-links">
-        <a href="#coffee">Coffee</a>
+        <a href="#nespresso-collection">Launch Collection</a>
         <a href="#premium">Premium</a>
         <a href="#story">Our Story</a>
         <a href="#wholesale">Wholesale</a>
@@ -461,9 +506,9 @@
               <img src="assets/rema-dolce-gusto-all.jpg" alt="Rema Caffè Dolce Gusto compatible beverage collection">
             </div>
             <div class="system-copy">
-              <span class="pill">Café Favorites</span>
+              <span class="pill">Secondary Launch Collection</span>
               <h3>Dolce Gusto Compatible</h3>
-              <p class="section-copy">Coffee, cappuccino, chocolate, matcha and other café-style drinks for Dolce Gusto compatible systems.</p>
+              <p class="section-copy">A smaller introductory selection of coffee and café-style drinks for Dolce Gusto compatible systems.</p>
             </div>
           </article>
         </div>
@@ -475,47 +520,92 @@
       <div class="wrap">
         <div class="collection-intro">
           <div class="section-head" style="margin-bottom:0;">
-            <div class="eyebrow">Nespresso Original compatible</div>
-            <h2>Meet a few of the coffees coming to the U.S.</h2>
-            <p class="section-copy">Ten aluminum capsules per box, with a mix of classic espresso and flavored coffees. These are collection highlights while we finalize the full U.S. launch assortment.</p>
+            <div class="eyebrow">First U.S. Nespresso Original collection</div>
+            <h2>Eight coffees. One easy way to explore Rema Caffè.</h2>
+            <p class="section-copy">Our first U.S. assortment pairs three flavored coffees with five classic espresso styles. Every box contains 10 aluminum capsules compatible with Nespresso Original machines.</p>
           </div>
-          <div class="collection-note">Product availability may vary during the launch phase.</div>
+          <div class="collection-note">Launch assortment shown below. Availability may change as the first shipment sells through.</div>
         </div>
-        <div class="product-grid">
-          <article class="product-card">
-            <div class="product-photo"><img src="assets/rema-allegro-box-caps.jpg" alt="Rema Caffè Allegro box with Nespresso Original compatible aluminum capsule"></div>
+
+        <div class="launch-bar">Flavor leads the first U.S. drop: Cookies, Caramel and Hazelnut are the three featured launch coffees.</div>
+
+        <div class="collection-group-head">
+          <h3>Flavor collection</h3>
+          <span>Easygoing, playful and made for everyday indulgence.</span>
+        </div>
+        <div class="featured-product-grid">
+          <article class="feature-card">
+            <div class="feature-photo"><img src="assets/rema-cookies-lifestyle.jpg" alt="Rema Caffè Cookies coffee capsules with a cup and chocolate cookies"></div>
             <div class="product-body">
-              <div class="product-meta">Classic espresso</div>
-              <h3>Allegro</h3>
-              <p>Balanced and elegant, with citrus, nut and dried-fruit notes and a gentle medium roast.</p>
-              <span class="product-detail">10 aluminum capsules</span>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-photo"><img src="assets/rema-caramel-box-caps.jpg" alt="Rema Caffè Caramel box with Nespresso Original compatible aluminum capsule"></div>
-            <div class="product-body">
-              <div class="product-meta">Flavored coffee</div>
-              <h3>Caramel</h3>
-              <p>100% Arabica with a smooth espresso character and creamy caramel aroma.</p>
-              <span class="product-detail">10 aluminum capsules</span>
-            </div>
-          </article>
-          <article class="product-card">
-            <div class="product-photo"><img src="assets/rema-cookies-box-caps.jpg" alt="Rema Caffè Cookies box with Nespresso Original compatible aluminum capsule"></div>
-            <div class="product-body">
-              <div class="product-meta">Flavored coffee</div>
+              <div class="product-meta">100% Arabica · Medium roast</div>
               <h3>Cookies</h3>
-              <p>A playful coffee built around the familiar sweetness of chocolate-cookie flavor.</p>
+              <p>Chocolate-cookie aroma wrapped around a smooth espresso — playful, familiar and built for a small everyday treat.</p>
               <span class="product-detail">10 aluminum capsules</span>
             </div>
           </article>
-          <article class="product-card">
-            <div class="product-photo"><img src="assets/rema-hazelnut-box-caps.jpg" alt="Rema Caffè Hazelnut box with Nespresso Original compatible aluminum capsule"></div>
+          <article class="feature-card">
+            <div class="feature-photo"><img src="assets/rema-caramel-lifestyle.jpg" alt="Rema Caffè Caramel coffee capsules with a caramel coffee drink"></div>
             <div class="product-body">
-              <div class="product-meta">Flavored coffee</div>
-              <h3>Hazelnut</h3>
-              <p>100% Arabica with roasted hazelnut, chocolate and espresso notes in a smooth medium body.</p>
+              <div class="product-meta">100% Arabica · Medium roast</div>
+              <h3>Caramel</h3>
+              <p>Brazilian Arabica with a creamy caramel aroma for a sweeter, softer take on the everyday espresso moment.</p>
               <span class="product-detail">10 aluminum capsules</span>
+            </div>
+          </article>
+          <article class="feature-card">
+            <div class="feature-photo"><img src="assets/rema-hazelnut-lifestyle.jpg" alt="Rema Caffè Hazelnut coffee capsules with a hazelnut coffee drink"></div>
+            <div class="product-body">
+              <div class="product-meta">100% Arabica · Medium roast</div>
+              <h3>Hazelnut</h3>
+              <p>Smooth Arabica with roasted hazelnut and chocolate notes — rich enough to feel indulgent without becoming heavy.</p>
+              <span class="product-detail">10 aluminum capsules</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="collection-group-head">
+          <h3>Classic espresso collection</h3>
+          <span>From delicate and balanced to bold and intense.</span>
+        </div>
+        <div class="classic-product-grid">
+          <article class="classic-card">
+            <div class="classic-photo"><img src="assets/rema-gusto-satin-box-caps.jpg" alt="Rema Caffè Gusto Satin Nespresso Original compatible capsules"></div>
+            <div class="product-body">
+              <div class="product-meta">Intensity 4 / 12</div>
+              <h3>Gusto Satin</h3>
+              <p>100% Arabica with floral, cocoa-biscuit and walnut notes.</p>
+            </div>
+          </article>
+          <article class="classic-card">
+            <div class="classic-photo"><img src="assets/rema-allegro-box-caps.jpg" alt="Rema Caffè Allegro Nespresso Original compatible capsules"></div>
+            <div class="product-body">
+              <div class="product-meta">Intensity 8 / 12</div>
+              <h3>Allegro</h3>
+              <p>Balanced 100% Arabica with citrus, nut and dried-fruit notes.</p>
+            </div>
+          </article>
+          <article class="classic-card">
+            <div class="classic-photo"><img src="assets/rema-arabica-gold-box-caps.jpg" alt="Rema Caffè Arabica Gold Nespresso Original compatible capsules"></div>
+            <div class="product-body">
+              <div class="product-meta">Intensity 10 / 12</div>
+              <h3>Arabica Gold</h3>
+              <p>100% Arabica with a fuller body and fruit-and-chocolate character.</p>
+            </div>
+          </article>
+          <article class="classic-card">
+            <div class="classic-photo"><img src="assets/rema-forte-box-caps.jpg" alt="Rema Caffè Forte Nespresso Original compatible capsules"></div>
+            <div class="product-body">
+              <div class="product-meta">Intensity 11 / 12</div>
+              <h3>Forte</h3>
+              <p>Arabica and Robusta with a structured body and cocoa-dark chocolate notes.</p>
+            </div>
+          </article>
+          <article class="classic-card">
+            <div class="classic-photo"><img src="assets/rema-intenso-box-caps.jpg" alt="Rema Caffè Intenso Nespresso Original compatible capsules"></div>
+            <div class="product-body">
+              <div class="product-meta">Intensity 12 / 12</div>
+              <h3>Intenso</h3>
+              <p>Strong, crema-forward espresso with a long-lasting finish.</p>
             </div>
           </article>
         </div>
@@ -528,10 +618,10 @@
           <img src="assets/rema-premium-delicato-set.jpg" alt="Rema Caffè Premium Delicato capsule boxes">
         </div>
         <div>
-          <div class="eyebrow">Rema Caffè Premium</div>
-          <h2>A more elevated espresso moment.</h2>
-          <p class="section-copy">The Premium collection brings a more refined look and espresso-forward experience to the range, including Delicato, Fortissimo, Supremo and Ristretto.</p>
-          <p class="section-copy" style="margin-top:14px;">Built for the same idea at the heart of Rema Caffè: make the everyday coffee moment feel a little more special.</p>
+          <div class="eyebrow">Future U.S. collection</div>
+          <h2>A premium chapter for later.</h2>
+          <p class="section-copy">Rema Caffè also produces a Premium Nespresso-compatible collection, including Delicato, Fortissimo, Supremo and Ristretto. It is not part of the first U.S. shipment, but it gives us a natural next collection to evaluate after launch.</p>
+          <p class="section-copy" style="margin-top:14px;">For now, the focus stays on learning what U.S. customers love most from the eight-coffee Classic and Flavor assortment above.</p>
         </div>
       </div>
     </section>
@@ -556,7 +646,7 @@
     <section id="story" class="section">
       <div class="wrap story-grid">
         <div class="story-image">
-          <img src="drinking coffee.png" alt="A relaxed everyday coffee ritual">
+          <img src="assets/rema-hazelnut-lifestyle.jpg" alt="Rema Caffè Hazelnut coffee in a warm everyday setting">
         </div>
         <div>
           <div class="eyebrow">Meet Rema Caffè</div>
