@@ -356,25 +356,63 @@
     }
     .premium-image img { display: block; width: 100%; }
 
-    .flavor-grid {
+    .mood-grid {
       display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 12px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
-    .flavor {
-      min-height: 140px;
-      border-radius: 22px;
-      padding: 18px;
-      display: flex;
-      align-items: flex-end;
+    .mood-card {
+      position: relative;
+      min-height: 300px;
+      border-radius: 24px;
+      overflow: hidden;
+      text-decoration: none;
+      background: #ddd;
+      box-shadow: 0 12px 30px rgba(50,37,29,.08);
+    }
+    .mood-card img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .25s ease;
+    }
+    .mood-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(17,12,10,.05) 25%, rgba(17,12,10,.76) 100%);
+    }
+    .mood-card:hover img { transform: scale(1.025); }
+    .mood-copy {
+      position: absolute;
+      z-index: 2;
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+      color: white;
+    }
+    .mood-copy small {
+      display: block;
+      margin-bottom: 7px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: .7rem;
       font-weight: 900;
-      background: white;
-      border: 1px solid var(--line);
+      opacity: .84;
     }
-    .flavor:nth-child(2) { background: #2f2926; color: white; }
-    .flavor:nth-child(3) { background: #b68155; color: white; }
-    .flavor:nth-child(4) { background: #d9c09c; }
-    .flavor:nth-child(5) { background: #dce6d3; }
+    .mood-copy h3 {
+      margin: 0 0 7px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.55rem;
+    }
+    .mood-copy p {
+      margin: 0;
+      color: rgba(255,255,255,.84);
+      font-size: .92rem;
+      max-width: 520px;
+    }
 
     .story-grid {
       display: grid;
@@ -449,7 +487,7 @@
       .classic-product-grid { grid-template-columns: repeat(3, 1fr); }
       .collection-intro { align-items: flex-start; flex-direction: column; }
       .collection-note { text-align: left; }
-      .flavor-grid { grid-template-columns: repeat(2, 1fr); }
+      .mood-grid { grid-template-columns: 1fr; }
       .wholesale { grid-template-columns: 1fr; }
       .footer-inner { grid-template-columns: 1fr; }
     }
@@ -459,7 +497,7 @@
       .hero { padding-top: 42px; }
       h1 { font-size: clamp(3rem, 16vw, 4.6rem); }
       .hero-visual, .hero-visual img { min-height: 320px; }
-      .featured-product-grid, .classic-product-grid, .flavor-grid, .faq-grid { grid-template-columns: 1fr; }
+      .featured-product-grid, .classic-product-grid, .mood-grid, .faq-grid { grid-template-columns: 1fr; }
       .system-copy { padding: 20px; }
     }
   </style>
@@ -651,16 +689,43 @@
     <section class="section">
       <div class="wrap">
         <div class="section-head">
-          <div class="eyebrow">Explore the mood</div>
-          <h2>There is more than one way to enjoy the moment.</h2>
-          <p class="section-copy">Rema Caffè moves easily from the first espresso of the morning to something sweeter, creamier or more playful later in the day.</p>
+          <div class="eyebrow">Find your mood</div>
+          <h2>Choose the coffee for the moment.</h2>
+          <p class="section-copy">Some mornings call for something gentle. Others need intensity. And sometimes the right answer is simply caramel, hazelnut or cookies.</p>
         </div>
-        <div class="flavor-grid">
-          <div class="flavor">Classic Espresso</div>
-          <div class="flavor">Bold & Intense</div>
-          <div class="flavor">Flavored Coffee</div>
-          <div class="flavor">Café Favorites</div>
-          <div class="flavor">Something Different</div>
+        <div class="mood-grid">
+          <a class="mood-card" href="products/gusto-satin/">
+            <img src="assets/rema-allegro-cup-caps.jpg" alt="Rema Caffè balanced espresso">
+            <div class="mood-copy">
+              <small>Smooth & balanced</small>
+              <h3>Easygoing espresso</h3>
+              <p>Start with Gusto Satin or Allegro for a softer, more balanced everyday cup.</p>
+            </div>
+          </a>
+          <a class="mood-card" href="products/intenso/">
+            <img src="assets/rema-forte-cup-caps.jpg" alt="Rema Caffè bold and intense espresso">
+            <div class="mood-copy">
+              <small>Bold & intense</small>
+              <h3>When you want more punch</h3>
+              <p>Arabica Gold, Forte and Intenso bring more body, depth and espresso intensity.</p>
+            </div>
+          </a>
+          <a class="mood-card" href="#nespresso-collection">
+            <img src="assets/rema-caramel-lifestyle.jpg" alt="Rema Caffè flavored coffee">
+            <div class="mood-copy">
+              <small>Flavored & indulgent</small>
+              <h3>A little more fun in the cup</h3>
+              <p>Cookies, Caramel and Hazelnut turn the everyday coffee break into a small treat.</p>
+            </div>
+          </a>
+          <a class="mood-card" href="dolce-gusto/">
+            <img src="assets/rema-dolce-gusto-all.jpg" alt="Rema Caffè Dolce Gusto compatible collection">
+            <div class="mood-copy">
+              <small>Dolce Gusto compatible</small>
+              <h3>Another way to enjoy Rema</h3>
+              <p>Explore seven coffees made for Dolce Gusto compatible machines.</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
