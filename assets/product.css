@@ -13,7 +13,7 @@ a{color:inherit}
 .nav-inner{width:min(1180px,calc(100% - 36px));min-height:68px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:22px}
 .nav-brand{display:flex;align-items:center;gap:10px;text-decoration:none}
 .brand-logo{display:block;width:148px;height:46px;flex:0 0 auto;background:#fff url('/assets/dg-gusto-satin-box-caps.jpg') -84px -214px / 640px 640px no-repeat;border-radius:2px}
-.brand-import{color:var(--muted);font-size:.72rem;font-weight:700;max-width:110px;line-height:1.15}
+.brand-import{display:flex;flex-direction:column;gap:2px;color:var(--muted);font-size:.61rem;font-weight:700;line-height:1.05;white-space:nowrap}.brand-import-logo{display:block;width:94px;height:auto}
 .nav-links{display:flex;gap:18px;flex-wrap:wrap;font-size:.92rem;font-weight:800}
 .nav-links a{text-decoration:none}.nav-links a:hover{color:var(--red)}
 .wrap{width:min(1180px,calc(100% - 36px));margin:0 auto}
@@ -52,6 +52,6 @@ h2{font-size:clamp(2rem,4vw,3.4rem);line-height:1.03;margin:0 0 14px}
 .more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .more-card{display:block;text-decoration:none;border:1px solid var(--line);border-radius:18px;background:#fff;padding:16px;font-weight:900}
 .more-card span{display:block;color:var(--muted);font-size:.78rem;font-weight:700;margin-top:4px}.more-card:hover{border-color:rgba(179,25,37,.4);color:var(--red)}
-footer{background:#120f0e;color:#f5efe8;padding:34px 0}.footer-inner{width:min(1180px,calc(100% - 36px));margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:26px;font-size:.9rem}.footer-inner a{color:#fff}.footer-muted{color:rgba(255,255,255,.58)}
+footer{background:#120f0e;color:#f5efe8;padding:34px 0}.footer-inner{width:min(1180px,calc(100% - 36px));margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:26px;font-size:.9rem}.footer-inner a{color:#fff}.footer-logo{display:block;width:138px;height:auto;margin:0 0 8px}.footer-company{font-weight:800;margin-bottom:2px}.footer-muted{color:rgba(255,255,255,.58)}
 @media(max-width:900px){.hero{grid-template-columns:1fr}.expect-grid,.proof-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.nav-inner{padding:14px 0;align-items:flex-start;flex-direction:column}.nav-links{gap:10px 14px}.gallery{grid-template-columns:1fr}.gallery figure:first-child{grid-column:auto}.facts,.more-grid{grid-template-columns:1fr}.hero{padding-bottom:52px}}
