@@ -7,7 +7,7 @@
   <link rel="canonical" href="https://eu-espresso.com/" />
   <meta property="og:title" content="EUspresso | Rema Caffè Coffee Capsules in the USA" />
   <meta property="og:description" content="European-crafted coffee capsules for the moments you look forward to." />
-  <meta property="og:image" content="https://eu-espresso.com/assets/rema-classic-alu-all-caps.jpg" />
+  <meta property="og:image" content="https://eu-espresso.com/assets/hero-rema-product-placement.png" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://eu-espresso.com/" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -222,6 +222,15 @@
       object-fit: contain;
       padding: 18px;
     }
+    .system-image.collection-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 4px;
+      padding: 10px;
+    }
+    .system-image.collection-grid img {
+      padding: 4px;
+    }
     .system-copy { padding: 24px; }
     .pill {
       display: inline-flex;
@@ -305,7 +314,7 @@
     .feature-card:hover .feature-photo img { transform: scale(1.025); }
     .classic-product-grid {
       display: grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
     }
     .classic-photo {
@@ -349,7 +358,7 @@
     .shop-preview {display:grid;grid-template-columns:.9fr 1.1fr;gap:30px;align-items:center;}
     .shop-preview-image {border-radius:24px;overflow:hidden;margin-bottom:14px;box-shadow:0 16px 42px rgba(66,43,31,.10);}
     .shop-preview-image img {display:block;width:100%;aspect-ratio:16/9;object-fit:cover;}
-    .shop-cards {display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+    .shop-cards {display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
     .shop-card {padding:20px;border-radius:20px;background:white;border:1px solid var(--line);}
     .shop-card small {color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.08em;}
     .shop-card h3 {margin-top:8px;}
@@ -528,7 +537,7 @@
       </a>
       <div class="nav-links">
         <a href="shop/">Shop Preview</a>
-        <a href="#nespresso-collection">Launch Collection</a>
+        <a href="#nespresso-collection">Nespresso Original</a>
         <a href="dolce-gusto/">Dolce Gusto</a>
         <a href="#premium">Premium</a>
         <a href="#story">Our Story</a>
@@ -544,8 +553,8 @@
       <h1>Vacation mood.<br>Every morning.</h1>
       <p class="hero-copy">European-crafted coffee capsules for the moments you look forward to. Discover Rema Caffè — from classic espresso to playful café favorites — brought to the United States by EUspresso.</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="shop/">Preview the launch shop</a>
-        <a class="btn btn-secondary" href="mailto:support@eu-espresso.com?subject=EUspresso%20Launch%20Updates">Get launch updates</a>
+        <a class="btn btn-primary" href="shop/">Preview the shop</a>
+        <a class="btn btn-secondary" href="mailto:support@eu-espresso.com?subject=EUspresso%20Ordering%20Updates">Get ordering updates</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -564,8 +573,11 @@
         </div>
         <div class="system-grid">
           <article class="system-card">
-            <div class="system-image">
-              <img src="assets/rema-classic-alu-all-caps.jpg" alt="Rema Caffè Nespresso Original compatible aluminum capsule collection">
+            <div class="system-image collection-grid" aria-label="Rema Caffè Nespresso Original compatible collection">
+              <img src="assets/rema-cookies-box-caps.jpg" alt="Rema Caffè Cookies">
+              <img src="assets/rema-caramel-box-caps.jpg" alt="Rema Caffè Caramel">
+              <img src="assets/rema-gusto-satin-box-caps.jpg" alt="Rema Caffè Gusto Satin">
+              <img src="assets/rema-intenso-box-caps.jpg" alt="Rema Caffè Intenso">
             </div>
             <div class="system-copy">
               <span class="pill">Primary Collection</span>
@@ -594,8 +606,8 @@
         <div class="collection-intro">
           <div class="section-head" style="margin-bottom:0;">
             <div class="eyebrow">Initial U.S. Nespresso Original collection</div>
-            <h2>Eight coffees. One easy way to explore Rema Caffè.</h2>
-            <p class="section-copy">Our initial U.S. assortment pairs three flavored coffees with five classic espresso styles. Every box contains 10 aluminum capsules compatible with Nespresso Original machines.</p>
+            <h2>Seven coffees. One easy way to explore Rema Caffè.</h2>
+            <p class="section-copy">Our initial U.S. assortment pairs three flavored coffees with four classic espresso styles. Every box contains 10 aluminum capsules compatible with Nespresso Original machines.</p>
           </div>
         </div>
 
@@ -647,15 +659,7 @@
               <a class="product-detail" href="products/gusto-satin/">Explore Gusto Satin →</a>
             </div>
           </article>
-          <article class="classic-card">
-            <div class="classic-photo"><img src="assets/rema-allegro-box-caps.jpg" alt="Rema Caffè Allegro Nespresso Original compatible capsules"></div>
-            <div class="product-body">
-              <div class="product-meta">Intensity 8 / 12</div>
-              <h3>Allegro</h3>
-              <p>Balanced 100% Arabica with citrus, nut and dried-fruit notes.</p>
-              <a class="product-detail" href="products/allegro/">Explore Allegro →</a>
-            </div>
-          </article>
+          
           <article class="classic-card">
             <div class="classic-photo"><img src="assets/rema-arabica-gold-box-caps.jpg" alt="Rema Caffè Arabica Gold Nespresso Original compatible capsules"></div>
             <div class="product-body">
@@ -687,7 +691,7 @@
       </div>
     </section>
 
-    <section class="section alt"><div class="wrap shop-preview"><div><div class="eyebrow">Launch preview</div><h2>Start with a pack, then find your favorite.</h2><p class="section-copy">Explore the suggested launch assortment, including single sleeves and discovery packs. Nespresso Original compatible sleeves are shown at a suggested launch MSRP of $7.99, with free standard shipping planned for orders of $40 or more.</p><div class="hero-actions"><a class="btn btn-primary" href="shop/">See planned launch packs</a></div></div><div><div class="shop-preview-image"><img src="assets/hero-rema-product-placement.png" alt="Woman enjoying espresso beside Rema Caffè capsules in a sunlit European-style kitchen"></div><div class="shop-cards"><article class="shop-card"><small>3 sleeves</small><h3>Flavor Trio</h3><p>Cookies, Caramel and Hazelnut.</p></article><article class="shop-card"><small>6 sleeves</small><h3>Build Your Six</h3><p>Explore the collection your way.</p></article><article class="shop-card"><small>8 sleeves</small><h3>Full Collection</h3><p>Try every Nespresso coffee in the collection.</p></article></div></div></div></section>
+    <section class="section alt"><div class="wrap shop-preview"><div><div class="eyebrow">Collection preview</div><h2>Start with a bundle, then find your favorite.</h2><p class="section-copy">Explore the U.S. collection through single sleeves and curated bundles. Nespresso Original compatible sleeves have a suggested MSRP of $7.99, and orders of $40 or more qualify for free standard shipping.</p><div class="hero-actions"><a class="btn btn-primary" href="shop/">See collection bundles</a></div></div><div><div class="shop-preview-image"><img src="assets/hero-rema-product-placement.png" alt="Woman enjoying espresso beside Rema Caffè capsules in a sunlit European-style kitchen"></div><div class="shop-cards"><article class="shop-card"><small>3 sleeves · $21.99</small><h3>Sweet Escape Trio</h3><p>Cookies, Caramel and Hazelnut.</p></article><article class="shop-card"><small>4 sleeves · $28.99</small><h3>Espresso Discovery Bundle</h3><p>Explore all four classic espresso styles.</p></article><article class="shop-card"><small>10 sleeves · $71.91</small><h3>Build Your Own 10</h3><p>Choose any 10 sleeves and pay for 9.</p></article><article class="shop-card"><small>7 sleeves · $49.99</small><h3>Complete Discovery Bundle</h3><p>One sleeve of every U.S. Nespresso coffee.</p></article></div></div></div></section>
 
     <section id="premium" class="section">
       <div class="wrap premium-grid">
@@ -712,11 +716,11 @@
         </div>
         <div class="mood-grid">
           <a class="mood-card" href="products/gusto-satin/">
-            <img src="assets/rema-allegro-cup-caps.jpg" alt="Rema Caffè balanced espresso">
+            <img src="assets/rema-gusto-satin-cup-caps.jpg" alt="Rema Caffè balanced espresso">
             <div class="mood-copy">
               <small>Smooth & balanced</small>
               <h3>Easygoing espresso</h3>
-              <p>Start with Gusto Satin or Allegro for a softer, more balanced everyday cup.</p>
+              <p>Start with Gusto Satin for a softer, more balanced everyday cup.</p>
             </div>
           </a>
           <a class="mood-card" href="products/intenso/">
@@ -772,7 +776,7 @@
           <div>
             <div class="eyebrow" style="color:#e8a9ae;">For retail & distribution partners</div>
             <h2 style="margin-bottom:12px;">Bring Rema Caffè to your shelves.</h2>
-            <p>EUspresso welcomes conversations with independent retailers, European and Mediterranean markets, specialty grocers, online coffee retailers and regional distributors. Ask about product availability, wholesale formats and launch opportunities.</p>
+            <p>EUspresso welcomes conversations with independent retailers, European and Mediterranean markets, specialty grocers, online coffee retailers and regional distributors. Ask about product availability, wholesale formats and retail opportunities.</p>
           </div>
           <a class="btn btn-secondary" href="mailto:support@eu-espresso.com?subject=Wholesale%20Inquiry">Request wholesale information</a>
         </div>
